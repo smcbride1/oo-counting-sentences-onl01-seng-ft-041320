@@ -15,7 +15,7 @@ class String
   end
 
   def count_sentences
-    split_sentence = []
+    split_sentence = ["#{self}"]
     split_sentence.push(self.split("."))
     split_sentence.map! {|s| self.split("!")}.flatten
     split_sentence.map! {|s| self.split("?")}.flatten
