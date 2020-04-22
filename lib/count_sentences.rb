@@ -22,5 +22,4 @@ class String
     split_sentence.delete_if { |s| s == "" }.length
   end
 
-  binding.pry
 end
