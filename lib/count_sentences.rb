@@ -15,6 +15,10 @@ class String
   end
 
   def count_sentences
-    self.split(".", "?", "!").delete_if { |s| s == "" }.length
+    split_sentence = []
+    split_sentence.push(self.split("."))
+    split_sentence.push(self.split("?"))
+    split_sentence.push(self.split("!"))
+    split_sentence.delete_if { |s| s == "" }.length
   end
 end
