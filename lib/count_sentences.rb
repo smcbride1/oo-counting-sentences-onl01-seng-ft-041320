@@ -16,10 +16,11 @@ class String
 
   def count_sentences
     split_sentence = ["#{self}"]
-    [".", "?", "!"].each do |symbol|
-      split_sentence.map! {|s| self.split(symbol)}.flatten
+    [".", "?", "!"].each do |symbl|
+      split_sentence.map! {|s| self.split(symbl)}.flatten
     end
     split_sentence.delete_if { |s| s.empty? }.length
   end
 
+  binding.pry
 end
