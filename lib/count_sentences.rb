@@ -19,7 +19,7 @@ class String
     split_sentence.push(self.split("."))
     split_sentence.push(self.split("?"))
     split_sentence.push(self.split("!"))
-    split_sentence.delete_if { |s| s == "" }.length
+    split_sentence.delete_if { |s| s.empty }.length
   end
 
 end
