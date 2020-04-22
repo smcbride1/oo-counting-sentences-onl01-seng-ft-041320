@@ -16,9 +16,9 @@ class String
 
   def count_sentences
     split_sentence = ["#{self}"]
-    split_sentence.push(self.split("."))
-    split_sentence.map! {|s| self.split("!")}.flatten
-    split_sentence.map! {|s| self.split("?")}.flatten
+    [".", "?", "!"].each do
+      split_sentence.map! {|s| self.split("!")}.flatten
+    end
     split_sentence.delete_if { |s| s.empty? }.length
   end
 
